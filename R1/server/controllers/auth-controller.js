@@ -14,6 +14,14 @@ const register = async (req, res) => {
   }
 }
 
+const address = async (req, res) => {
+  try {
+    res.status(200).send('Welcome to the address field');
+  } catch (error) {
+    res.status(500).send(error);
+  }
+}
+
 module.exports = {
-  home, register
+  home, register, address
 }
